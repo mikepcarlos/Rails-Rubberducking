@@ -1,0 +1,21 @@
+
+<br>
+<%= form_for(@duck) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br/>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <br/>
+  <%= f.label :student %>
+  <%= f.collection_select :student_id, Student.all, :id, :name %>
+  <br>
+  <%= f.submit %>
+<% end %>
+
+
+<% if flash[:errors] %>
+  <% flash[:errors].each do |error| %>
+    <li> <%= error %> </li>
+  <% end %>
+<% end %>
