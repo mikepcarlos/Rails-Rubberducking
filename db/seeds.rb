@@ -3,5 +3,5 @@
 end
 
 5.times do
-  Duck.create(name: Faker::Dog.meme_phrase, description: Faker::Dog.breed)
+  Duck.create(name: Faker::Dog.meme_phrase, description: Faker::Dog.breed, student_id: rand(1..10))
 end
